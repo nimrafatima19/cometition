@@ -15,7 +15,7 @@ if (question === "3") {  //use inverted comma to make number to string
   function reverseString(name) {
     return name.split("").reverse().join("");
   }
-  document.write("<br>" + reverseString(name));
+  document.write("<br>"  + `See your name is reverse now :  `,reverseString(name));
 }
 
 
