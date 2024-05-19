@@ -1,108 +1,82 @@
 
-prompt("write Question number like 1,2..")
-// Question 1
-let num = [2,3,-2,-4]
-alert(num[0] * num[1]);
 
 
 
-if (prompt == 1){
-    alert(num)
-}if (prompt !== 1){
-alert("it's not Q NO:01");
+var ary = ["", "Question # 01: Given an integer array nums, find a subarray that has the largest product, and return the product.<br/>", "Question # 02: Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.You may assume that each input would have exactly one solution, and you may not use thesame element twice.<br/>", "Question # 03: Reverse each word in a given input string.", "Question # 04: Write a JavaScript program to display the reading status (i.e. display book name, author name and reading status) of the following books.<br/>", "Question # 05:Write a JavaScript function to convert an amount into coins.Sample function : amountTocoins(46, [25, 10, 5, 2, 1])Here 46 is the amount. and 25, 10, 5, 2, 1 are coins. Output : 25, 10, 10, 1 <br/>",]
+
+for (i = 0; i < ary.length; i++) {
+
 }
-// Question 02
-let nums = [2,7,11,15]
-alert(nums [0] + [1])
-
-if(prompt == 2){
-    alert(nums)
-}
-// Question 3
-
-// program to reverse a string
-
-function reverseString(str) {
-
-    // return a new array of strings
-    
-    const arrayStrings = str.split("");
-    
-    // reverse the new created array elements
-    
-    const reverseArray = arrayStrings.reverse();
-    
-    // join all elements of the array into a string
-    
-    const joinArray = reverseArray.join("");
-    
-    // return the reversed string
-    
-    return joinArray;
-    
-    }
-    
-    // take input from the user
-    
-    const string = prompt('Q:04 Enter a string: ');
-    
-    const result = reverseString(string);
-    
-    alert(result);
-
-
-
-
-// Question 04
-var library = [
-    {
-        authour: 'Bill Gates',
-        title: 'The Road Ahead',
-        readingStatus: true
-    },
-    {
-        authour: 'Steve Jobs',
-        title: 'Walter Isaacson',
-        readingStatus: true
-    },
-    {
-        authour: 'Steve Jobs',
-        title: 'Walter Isaacson',
-        readingStatus: true
-    },
-    {
-        authour: 'Suzanne Collins',
-        title: 'The Final Book of the Hunger Games',
-        readingStatus: false
-    },
-]
-for (var i = 0; i < library.length; i++) {
-    var book = library[i];
-    var bookInfo = book.title + ' by ' + book.author;
-    if (book.readingStatus) {
-      alert(bookInfo + ' - Already read.');
-    } else {
-      alert(bookInfo + ' - Not yet read.');
-    }
+// Question # 3
+var question = prompt("Enter any question no 1 to 5") // if we add + before prompt it will number
+document.write(ary[question]);
+if (question === "3") {  //use inverted comma to make number to string
+  var name = prompt("Enter your name")
+  function reverseString(name) {
+    return name.split("").reverse().join("");
   }
+  document.write("<br>" + reverseString(name));
+}
 
-// Question 05
+
+var library = [
+  {
+    author: "Bill Gates",
+    title: "The Road Ahead",
+    readingStatus: true
+  },
+  {
+    author: "Steve Jobs",
+    title: "Walltron",
+    readingStatus: true
+  },
+  {
+    author: "Nimra",
+    title: "Web Developer",
+    readingStatus: false
+  }
+];
+//Question #4
+if (question === "4") {
+  document.write(`<h2>Solution</h2>`)
+
+  for (i = 0; i < library.length; i++) {
+    document.write("Author is " + library[i].author + "<br/>");
+    document.write("Book Name is " + library[i].title + "<br/>");
+    document.write("Status is " + library[i].readingStatus + "<br/>");
+  }
+}
+//  Question # 5
+if (question === "5") {
+  
   function amountToCoins(amount, coins) {
     var result = [];
-    
+    document.write(`<h2>Solution</h2>`)
     for (var i = 0; i < coins.length; i++) {
       while (amount >= coins[i]) {
         result.push(coins[i]);
         amount -= coins[i];
       }
     }
-    
+
     return result;
   }
-  
-  alert(amountToCoins(46, [25, 10, 5, 2, 1]))
 
- 
+document.write(amountToCoins(46, [25, 10, 5, 2, 1]))
+}
+// Question # 1
+if (question === "1") {
+  document.write(`<h2>Solution</h2>`)
+  let num = [2, 3, -2, -4]
+  document.write(`Output is `,num[0] * num[1]);
+}
 
 
+// Question # 2
+if (question === "2") {
+  document.write(`<h2>Solution</h2>`)
+let nums = [2,7,11,15]
+document.write(`Output is `,nums [0] + [1])
+
+}
 
